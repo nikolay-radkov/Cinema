@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Cinema.Phone.Service.Query" CodeBehind="Query.svc.cs" %>

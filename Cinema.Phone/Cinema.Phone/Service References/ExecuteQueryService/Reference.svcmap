@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3e496068-7b8c-428f-b16f-56df97653adc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.0.210/Cinema.Phone.Service/Query.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Query.disco" MetadataType="Disco" ID="ae5d7fa5-a925-4a85-9a89-9d874518c8d8" SourceId="1" SourceUrl="http://192.168.0.210/Cinema.Phone.Service/Query.svc?disco" />
+    <MetadataFile FileName="Query.xsd" MetadataType="Schema" ID="a0b6da74-ec26-4804-9180-67f97b8ec0f7" SourceId="1" SourceUrl="http://192.168.0.210/Cinema.Phone.Service/Query.svc?xsd=xsd1" />
+    <MetadataFile FileName="Query.wsdl" MetadataType="Wsdl" ID="088dd1dd-2e77-4836-879c-35c90eb1e8e1" SourceId="1" SourceUrl="http://192.168.0.210/Cinema.Phone.Service/Query.svc?wsdl" />
+    <MetadataFile FileName="Query1.xsd" MetadataType="Schema" ID="32863499-c435-4afd-9c5f-e76011768dda" SourceId="1" SourceUrl="http://192.168.0.210/Cinema.Phone.Service/Query.svc?xsd=xsd2" />
+    <MetadataFile FileName="Query2.xsd" MetadataType="Schema" ID="7057912a-4c74-4bc9-9f5a-26e66fe7423b" SourceId="1" SourceUrl="http://192.168.0.210/Cinema.Phone.Service/Query.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

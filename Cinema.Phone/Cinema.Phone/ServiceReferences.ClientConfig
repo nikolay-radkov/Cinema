@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IQuery" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://192.168.0.210/Cinema.Phone.Service/Query.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IQuery"
+                contract="ExecuteQueryService.IQuery" name="BasicHttpBinding_IQuery" />
+        </client>
+    </system.serviceModel>
+</configuration>

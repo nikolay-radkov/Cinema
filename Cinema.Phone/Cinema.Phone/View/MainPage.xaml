@@ -1,0 +1,24 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Cinema.Phone.View.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Landscape" Orientation="Landscape"
+    shell:SystemTray.IsVisible="True">
+
+    <Canvas x:Name="LayoutRoot" Height="480" Width="725">
+        <Canvas.Background>
+            <ImageBrush ImageSource="/Cinema.Phone;component/Pictures/background.jpg"/>
+        </Canvas.Background>
+
+        <Button x:Name="btnSignIn" Content="Sign In"  Width="752" Height="92"   FontSize="30" Click="btnSignIn_Click" Background="Black" Foreground="#FFFFFF04" BorderBrush="Black" Opacity="0.9" Canvas.Left="-14" Canvas.Top="-16"/>
+        <Button x:Name="btnSignUp" Content="Sign Up"  Width="752" Height="90" Canvas.Top="396" Click="btnSignUp_Click" Canvas.Left="-14" Foreground="#FFFFFF04" Background="Black" BorderBrush="Black" FontSize="30" Opacity="0.9"/>
+    </Canvas>
+</phone:PhoneApplicationPage>

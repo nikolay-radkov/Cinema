@@ -1,0 +1,11 @@
+﻿<Window x:Class="Cinema.View.TrailerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        ResizeMode="CanMinimize"
+        Title="TrailerWindow" Height="416.311" Width="654.136"
+        Closing="TrailerWindow_Closing">
+    <Grid>
+        <WebBrowser LoadCompleted="wb_LoadCompleted" x:Name="media" HorizontalAlignment="Left" Height="477" VerticalAlignment="Top" Width="672" Margin="0,-70,-24,-20" ScrollViewer.CanContentScroll="False"/>
+
+    </Grid>
+</Window>

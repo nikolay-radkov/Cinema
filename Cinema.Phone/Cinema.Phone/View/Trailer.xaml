@@ -1,0 +1,21 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Cinema.Phone.View.Trailer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mmppf="clr-namespace:Microsoft.PlayerFramework;assembly=Microsoft.PlayerFramework"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Landscape" Orientation="Landscape"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
+
+    <Canvas  Height="480" Width="725" >
+        <mmppf:MediaPlayer x:Name="player" Width="725" Height="480"></mmppf:MediaPlayer>
+    </Canvas>
+
+</phone:PhoneApplicationPage>

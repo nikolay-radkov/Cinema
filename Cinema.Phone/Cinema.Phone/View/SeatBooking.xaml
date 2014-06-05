@@ -1,0 +1,69 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Cinema.Phone.View.SeatBooking"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Landscape" Orientation="Landscape"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+    <Canvas Height="480" Width="725">
+        <Canvas.Background>
+            <ImageBrush ImageSource="/Cinema.Phone;component/Pictures/info_background.jpg"/>
+        </Canvas.Background>
+        <ScrollViewer Height="431">
+            <StackPanel>
+                <Grid x:Name="seatsContainer" Canvas.Left="152" Canvas.Top="1" Width="700" Height="700" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <Button x:Name="btnScreen" Canvas.Top="367" Height="76" Width="725" Foreground="White" FontSize="25" Content="S C R E E N" Background="#FFA8A8A8" BorderBrush="{x:Null}"/>
+            </StackPanel>
+        </ScrollViewer>
+        <Button x:Name="freeSeat" Width="0" Height="0" BorderBrush="{x:Null}" >
+            <Button.Background>
+                <ImageBrush ImageSource="/Cinema.Phone;component/Pictures/seat320.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="bookedSeat" Width="0" Height="0"  BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Cinema.Phone;component/Pictures/seat320booked.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnBookTicket" Content="Book" Canvas.Top="417" Width="725" Height="77" Click="btnBookTicket_Click" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" FontSize="18" Foreground="White">
+            <Button.Background>
+                <SolidColorBrush Color="#FF8D8D8D" Opacity="0.37"/>
+            </Button.Background>
+        </Button>
+    </Canvas>
+
+</phone:PhoneApplicationPage>

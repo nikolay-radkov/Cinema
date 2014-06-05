@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Query" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.0.210/Cinema.Phone.Service/Query.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.0.210/Cinema.Phone.Service/Query.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.0.210/Cinema.Phone.Service/Query.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Cinema.Phone.Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IQuery_IsUserExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserExist" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_IsUserExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_IsEmailRegistered_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsEmailRegistered" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_IsEmailRegistered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsEmailRegisteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_HasAlreadyRegisteredUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:HasAlreadyRegisteredUser" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_HasAlreadyRegisteredUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HasAlreadyRegisteredUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_SignUpUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SignUpUser" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_SignUpUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SignUpUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_SignInUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SignInUser" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_SignInUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SignInUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetMovies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovies" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetMovies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoviesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetMovieInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieInfo" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetMovieInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetMovieComments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieComments" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetMovieComments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_CloseConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseConnection" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_CloseConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_AddComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddComment" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_AddComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_RateMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:RateMovie" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_RateMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RateMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_RefreshMovieRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshMovieRating" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_RefreshMovieRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshMovieRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_CalculateRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateRating" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_CalculateRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetMovieSchedules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieSchedules" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetMovieSchedules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieSchedulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetBookedSeats_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookedSeats" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetBookedSeats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookedSeatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_BookPlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookPlace" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_BookPlace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetScheduleTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleTime" />
+  </wsdl:message>
+  <wsdl:message name="IQuery_GetScheduleTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleTimeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IQuery">
+    <wsdl:operation name="IsUserExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/IsUserExist" message="tns:IQuery_IsUserExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/IsUserExistResponse" message="tns:IQuery_IsUserExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/GetUser" message="tns:IQuery_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/GetUserResponse" message="tns:IQuery_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsEmailRegistered">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/IsEmailRegistered" message="tns:IQuery_IsEmailRegistered_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/IsEmailRegisteredResponse" message="tns:IQuery_IsEmailRegistered_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HasAlreadyRegisteredUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/HasAlreadyRegisteredUser" message="tns:IQuery_HasAlreadyRegisteredUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/HasAlreadyRegisteredUserResponse" message="tns:IQuery_HasAlreadyRegisteredUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SignUpUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/SignUpUser" message="tns:IQuery_SignUpUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/SignUpUserResponse" message="tns:IQuery_SignUpUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SignInUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/SignInUser" message="tns:IQuery_SignInUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/SignInUserResponse" message="tns:IQuery_SignInUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/GetMovies" message="tns:IQuery_GetMovies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/GetMoviesResponse" message="tns:IQuery_GetMovies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/GetMovieInfo" message="tns:IQuery_GetMovieInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/GetMovieInfoResponse" message="tns:IQuery_GetMovieInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieComments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/GetMovieComments" message="tns:IQuery_GetMovieComments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/GetMovieCommentsResponse" message="tns:IQuery_GetMovieComments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/CloseConnection" message="tns:IQuery_CloseConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/CloseConnectionResponse" message="tns:IQuery_CloseConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/AddComment" message="tns:IQuery_AddComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/AddCommentResponse" message="tns:IQuery_AddComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RateMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/RateMovie" message="tns:IQuery_RateMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/RateMovieResponse" message="tns:IQuery_RateMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefreshMovieRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/RefreshMovieRating" message="tns:IQuery_RefreshMovieRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/RefreshMovieRatingResponse" message="tns:IQuery_RefreshMovieRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/CalculateRating" message="tns:IQuery_CalculateRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/CalculateRatingResponse" message="tns:IQuery_CalculateRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieSchedules">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/GetMovieSchedules" message="tns:IQuery_GetMovieSchedules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/GetMovieSchedulesResponse" message="tns:IQuery_GetMovieSchedules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookedSeats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/GetBookedSeats" message="tns:IQuery_GetBookedSeats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/GetBookedSeatsResponse" message="tns:IQuery_GetBookedSeats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookPlace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/BookPlace" message="tns:IQuery_BookPlace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/BookPlaceResponse" message="tns:IQuery_BookPlace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuery/GetScheduleTime" message="tns:IQuery_GetScheduleTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuery/GetScheduleTimeResponse" message="tns:IQuery_GetScheduleTime_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IQuery" type="tns:IQuery">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsUserExist">
+      <soap:operation soapAction="http://tempuri.org/IQuery/IsUserExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/IQuery/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsEmailRegistered">
+      <soap:operation soapAction="http://tempuri.org/IQuery/IsEmailRegistered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasAlreadyRegisteredUser">
+      <soap:operation soapAction="http://tempuri.org/IQuery/HasAlreadyRegisteredUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignUpUser">
+      <soap:operation soapAction="http://tempuri.org/IQuery/SignUpUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignInUser">
+      <soap:operation soapAction="http://tempuri.org/IQuery/SignInUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovies">
+      <soap:operation soapAction="http://tempuri.org/IQuery/GetMovies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieInfo">
+      <soap:operation soapAction="http://tempuri.org/IQuery/GetMovieInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieComments">
+      <soap:operation soapAction="http://tempuri.org/IQuery/GetMovieComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseConnection">
+      <soap:operation soapAction="http://tempuri.org/IQuery/CloseConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <soap:operation soapAction="http://tempuri.org/IQuery/AddComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RateMovie">
+      <soap:operation soapAction="http://tempuri.org/IQuery/RateMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefreshMovieRating">
+      <soap:operation soapAction="http://tempuri.org/IQuery/RefreshMovieRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateRating">
+      <soap:operation soapAction="http://tempuri.org/IQuery/CalculateRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieSchedules">
+      <soap:operation soapAction="http://tempuri.org/IQuery/GetMovieSchedules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookedSeats">
+      <soap:operation soapAction="http://tempuri.org/IQuery/GetBookedSeats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookPlace">
+      <soap:operation soapAction="http://tempuri.org/IQuery/BookPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleTime">
+      <soap:operation soapAction="http://tempuri.org/IQuery/GetScheduleTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Query">
+    <wsdl:port name="BasicHttpBinding_IQuery" binding="tns:BasicHttpBinding_IQuery">
+      <soap:address location="http://192.168.0.210/Cinema.Phone.Service/Query.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

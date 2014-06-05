@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Cinema.View.StartingUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="800">
+    <Canvas Height="500" Width="800">
+        <Canvas.Background>
+            <ImageBrush ImageSource="/Cinema;component/pictures/background.jpg"/>
+        </Canvas.Background>
+
+        <Button x:Name="btnSignIn" Content="Sign In"  Width="800" Height="76"   FontSize="30" Click="btnSignIn_Click" Background="Black" Foreground="#FFFFFF04" BorderBrush="Black" Opacity="0.9"/>
+        <Button x:Name="btnSignUp" Content="Sign Up"  Width="800" Height="76" Canvas.Right="45" Canvas.Top="424" Click="btnSignUp_Click" Canvas.Left="0" Foreground="#FFFFFF04" Background="Black" BorderBrush="Black" FontSize="30" Opacity="0.9"/>
+        <Button Width="0" Height="0" x:Name="btnEnter" Visibility="Visible" Click="btnEnter_Click" IsDefault="True"/>
+    </Canvas>
+</UserControl>
